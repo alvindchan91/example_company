@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/*some defaults from jquery tools doc */
+/*already absolutely positioned */
+.overlay { 
+	
+	display:none; /* must be hidden on load */
+	z-index:10000; /* place overlay on top of other elements, arbitrary high number */
+	
+	background-color:#333;
+	width:475px;
+	min-height:230px;
+	border:1px solid #999;
+	
+	-moz-box-shadow:0 0 90px 5px #000;
+	-webkit-box-shadow: 0 0 90px #000;
+}
+
+/* close button on upper right corner */
+/* not in HTML */
+.overlay .close {
+	background-image:url(../images/overlay/close.png); 
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+
+
+
+/* some styling for triggers */
+#triggers {
+	text-align:left;
+}
+
+#triggers img {
+	width:230px;
+	height:230px;
+	cursor:pointer;
+	margin:10px 0 10px 20px;
+	padding:2px;
+	background-color:#fff;
+	border:1px solid #ccc;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	
+}
+
+
+
+/* styling for elements inside overlay */
+.details {
+	position:absolute;
+	top:15px;
+	right:15px;
+	font-size:11px;
+	color:#fff;
+	width:200px;
+}
+
+.details h3 {
+	color:#aba;
+	font-size:15px;
+	margin:10px 20px 0 20px;
+}
