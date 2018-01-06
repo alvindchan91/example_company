@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* slideshow css */
+
+/* container*/
+.banner {
+	background:#FFF; /*for gradients unsupported browsers*/
+	background: -webkit-linear-gradient(top, #FFF, #555);
+    background: -o-linear-gradient(bottom, #FFF, #555);
+    background: -moz-linear-gradient(bottom, #FFF, #555);
+    background: linear-gradient(to bottom, #FFF, #555);
+
+	position:relative; 
+	height: 250px;
+	width: 1000px;
+	float:left;	
+	cursor:pointer; /*turn mouse over into pointer*/
+}
+
+/* slides */
+.banner div {
+	display:none; /*don't show before document is ready */
+	position:absolute; /* with parent relative we can position all banners where they are */
+	top: 0px;
+	left: 0px;
+	height:250px;
+	font-size:12px;
+}
+
+/* position the tabs below the banner absolutely */
+.slidetabs {
+	position:absolute;
+	top: 350px;
+	right: 20px;
+}
+
+/* single tab */
+.slidetabs a {
+	width:8px;
+	height:8px; /*show only one circle at a time */
+	float:left; /* make them float side by side or they'll be vertical */
+	margin:3px;
+	background:url(../images/navigator.png) 0 0 no-repeat; /* each a tag is an 8x24 image containing 3 shaded circles */
+	display:block;
+	font-size:1px;
+}
+
+/* center the image background to the 2nd shaded circle*/
+.slidetabs a:hover {
+	background-position:0 -8px;
+}
+
+/* center the image background to the 3rd shaded circle*/
+.slidetabs a.current {
+	background-position:0 -16px;     
+} 	

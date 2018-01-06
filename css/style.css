@@ -1,0 +1,316 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+
+/*html5 display rule*/
+address, article, aside, canvas, content, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+	display: block;
+}
+
+@font-face {/*need these font files for this to work, got from FontSquirrel*/
+	/*make it close to the top of file*/
+    font-family: 'exo_2regular';
+    src: url('../fonts/Exo2-Regular-webfont.eot');
+    src: url('../fonts/Exo2-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2-Regular-webfont.woff') format('woff'),
+         url('../fonts/Exo2-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Exo2-Regular-webfont.svg#exo_2regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exo_2bold';
+    src: url('../fonts/Exo2-Bold-webfont.eot');
+    src: url('../fonts/Exo2-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2-Bold-webfont.woff') format('woff'),
+         url('../fonts/Exo2-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Exo2-Bold-webfont.svg#exo_2bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exo_2italic';
+    src: url('../fonts/Exo2-Italic-webfont.eot');
+    src: url('../fonts/Exo2-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2-Italic-webfont.woff') format('woff'),
+         url('../fonts/Exo2-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/Exo2-Italic-webfont.svg#exo_2italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JunctionRegular';
+    src: url('../fonts/junction_02-webfont.eot');
+    src: url('../fonts/junction_02-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/junction_02-webfont.woff') format('woff'),
+         url('../fonts/junction_02-webfont.ttf') format('truetype'),
+         url('../fonts/junction_02-webfont.svg#JunctionRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+	background: #242424;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	background-image: url(../images/dots.png); /*repeat this dot over background */
+}
+
+h1, h2, h3 {
+	font-family:'exo_2regular', Georgia, "Times New Roman";
+}
+
+
+content{
+	width:1000px;
+	margin:20px auto;
+	position:relative;
+	background-color:#f2f3ed;
+	border-radius:20px; /*round edge*/
+	-moz-border-radius:20px; /* Firefox 3.6 and earlier */
+}
+
+header {
+	border-bottom-color: #CCC;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+header h1 {
+	padding:120px;
+	color:#242424;
+	font-size:42px;
+	padding:20px 20px 20px 97px;
+	color:#242424;
+	font-size:42px;
+
+	-webkit-transition:all 0.3s;
+	-o-transition-property:all;
+	-o-transition-duration:0.3s;
+	-moz-transition-property:all;
+	-moz-transition-duration:0.3s;
+	transition-property:all; /*animate everything*/
+	transition-duration:0.3s;
+}
+
+header h1:hover{ /*hover over top header*/
+	text-shadow: 2px 2px 2px #888;
+	-webkit-text-shadow:2px 2px 2px #888;
+}
+
+header p {
+	color:#242424;
+	font-family:'exo_2italic', Georgia, "Times New Roman";
+	font-size:14px;
+	position: absolute;
+	right: 0px;
+	top: 33px;
+	background-color:#f2f3ed;
+	padding:10px;
+
+	border-radius:20px;
+	-moz-border-radius:20px;
+	
+	/* 2d skew transform of how the font is (x-axis, y-axis)*/
+	transform:skew(-10deg,0deg);
+	-ms-transform:skew(-10deg,0deg);
+	-moz-transform:skew(-10deg,0deg); 
+	-webkit-transform:skew(-10deg,0deg);
+	-o-transform:skew(-10deg,0deg); 
+	
+	-webkit-transition:all .5s;
+	-o-transition-property:all;
+	-o-transition-duration:.5s;
+	-moz-transition-property:all;
+	-moz-transition-duration:.5s;
+	transition-property:all; /*animate everything*/
+	transition-duration:.5s;
+	}
+
+header p:hover {
+	color:#f2f3ed;
+	background-color:#242424;
+	background-image: url(../images/dots.png); /*make it look "see-through" to background*/
+}
+	
+
+#logo { 
+	position: absolute; 
+	top: 12px; 
+	left: 20px; 
+	background: url(../images/logo_small.png) no-repeat; 
+	width: 61px; 
+	height: 62px;
+	text-indent:-9999px;
+	
+	/* enable css3 transition */
+	-webkit-transition:-webkit-transform 1s;
+	-o-transition-property:-o-transform;
+	-o-transition-duration:1s;
+	-moz-transition-property:-o-transform;
+	-moz-transition-duration:1s;
+	transition-property:transform;
+	transition-duration:1s;
+}
+	
+#logo:hover
+{
+	/*add in rotation in hover state*/
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}	
+
+header#anim {
+	height:250px;
+}
+	
+nav {
+	float:left;
+	width:200px;
+}
+
+nav li{
+	list-style-type:none;
+}
+
+nav li a{
+	font-family:'exo_2regular', Georgia, "Times New Roman";
+	text-decoration:none;
+	display:block;
+	padding:10px 20px;
+	font-size:20px;
+
+	-webkit-transition:all 0.5s;
+	-o-transition-property:all;
+	-o-transition-duration:0.5s;
+	-moz-transition-property:all;
+	-moz-transition-duration:0.5s;
+	transition-property:all; 
+	transition-duration:0.5s;
+}
+
+nav li a:link{
+	color:#333;
+	
+}
+nav li a:visited{
+	color:#333;
+}
+nav li a:hover{ /*give same dot background image when hover but diff color*/
+	font-family:'exo_2italic', Georgia, "Times New Roman";
+	color:#FFF;
+	background-color:#4c7fb5;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+	background-image: url(../images/dots.png);
+}
+
+nav li a:active{
+	color:#333;
+	background-color:#666;
+}
+
+article {
+	width:799px;
+	float:right;
+	padding-bottom: 7px;
+	border-left-color: #CCC;
+	border-left-width: 1px;
+	border-left-style: solid;
+	box-shadow: 0px 0px 5px #888; /*blur shadow over article section*/
+	-webkit-box-shadow: 0px 0px 5px #888; /* Safari */
+}
+
+article h2, h3, p {
+	margin:0px 20px;
+	padding-top:10px;
+}
+	
+article p {
+	padding:4px 0 20px 0;
+	line-height:18px;
+}
+		
+article h2{
+	color:#373737;
+	font-size:28px;
+}
+
+article h3{
+	color:#373737;
+	font-size:20px;
+}
+
+article .leftfloat{
+	width:50%;
+	float:left;
+}
+	
+article .rightfloat{
+	width:50%;
+	float:right;
+}
+	
+footer {
+	border-top-color: #CCC;
+	border-top-width: 1px;
+	border-top-style: solid;
+	clear:both;
+
+	background:#4c7fb5; /*for gradients unsupported browsers*/
+	background: -webkit-linear-gradient(top, #2d4d6e, #4c7fb5);
+  background: -o-linear-gradient(bottom, #2d4d6e, #4c7fb5);
+  background: -moz-linear-gradient(bottom, #2d4d6e, #4c7fb5);
+  background: linear-gradient(to bottom, #2d4d6e, #4c7fb5);
+
+	border-bottom-right-radius:20px; /*only make bottom right and left rounded or else it will look weird if rounded at top footer*/
+	border-bottom-left-radius:20px;
+	-moz-border-bottom-right-radius:20px;
+	-moz-border-bottom-left-radius:20px;
+}
+	
+footer section.first {
+	float:left;
+	width:200px;
+	padding:10px 0 20px 0;
+}
+
+footer section.first p {
+	color:#f2f3ed;
+}	
+	
+footer section {
+	float:left;
+	width:246px;
+	padding:10px 0 20px 0;
+	color:#96C;
+}
+
+footer section h3 {
+	font-family:'exo_2italic', Georgia, "Times New Roman";
+	color:#fdfdfc;
+	font-size:16px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #F2F3ED;
+	padding-bottom: 0px;
+	font-weight:normal;
+}
+		
+footer section p {
+	color:#dedece;
+	font-size:10px;
+	line-height:16px;
+}
+
+.clearing {
+	clear:both;
+}

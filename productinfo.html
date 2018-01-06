@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset=utf-8>
+<title>AC Electronics</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/overlay.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script>
+	$(function() { //pass in string 30% to specify how far from top
+		$("img[rel]").overlay({top:'30%'});
+	});
+</script>
+
+
+</head>
+<body>
+<content>
+
+	<header>
+	<a href="index.html" id="logo">Home</a>
+	<h1>AC Electronics</h1>
+	<p>Rated #1 in quality products</p>
+	</header>
+	
+   
+	<header id="anim">
+	<img src="images/banner1.jpg" width="1000" height="250" alt="image1">
+	</header>
+	
+	<nav>
+	<ul>
+		<li><a href="index.html"><b>Home</b></a></li>
+		<li><a href="#"><b>Product Info</b></a></li>
+	</ul>
+	</nav>
+	
+	<article>
+	<h2>Lorem ipsum</h2> 
+	
+	<!-- trigger elements -->
+	<div id="triggers">
+		<img src="images/overlay/info1.png" width="250" height="250" rel="#img1"/> <!--rel for css-->
+		<img src="images/overlay/info2.png" rel="#img2"/>
+		<img src="images/overlay/info3.png" rel="#img3"/>
+	</div>
+	
+	<!-- overlays -->
+	<div class="overlay" id="img1">
+		<img src="images/overlay/info1.png" />
+
+		<div class="details">
+			<h3>Aipiscing ut</h3>
+			<p>
+				dolor sit amet consectetur adipiscing elit. Nulla id nulla risus, vitae consequat dui. Quisque vehicula tellus sed nisl feugiat adipiscing ut in neque.
+			</p>
+
+		</div>
+	</div>
+
+	<div class="overlay" id="img2">
+		<img src="images/overlay/info2.png" />
+		<div class="details">
+			<h3>Consectetur adipiscing</h3>
+			<p>
+				dolor sit amet consectetur adipiscing elit. Nulla id nulla risus, vitae consequat dui. Quisque vehicula tellus sed nisl feugiat adipiscing ut in neque.
+			</p>
+		</div>
+	</div>
+
+	<div class="overlay" id="img3">
+		<img src="images/overlay/info3.png" />
+		<div class="details">
+			<h3>Nulla risus</h3>
+			<p>
+				dolor sit amet consectetur adipiscing elit. Nulla id nulla risus, vitae consequat dui. Quisque vehicula tellus sed nisl feugiat adipiscing ut in neque.
+			</p>
+		</div>
+	</div>
+
+	<h3>Fusce tempus non quam eget </h3> 
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra eros libero, quis luctus turpis tincidunt non. Sed et turpis at dui ultricies porta vel et arcu. Curabitur a sollicitudin orci. Integer ut eros ut est pharetra feugiat. Duis vel nisi mauris. Morbi sem nibh, condimentum sed nunc non, faucibus accumsan nunc. In faucibus, lectus id elementum interdum, lectus nisi tincidunt ante, at auctor eros ligula lacinia metus. Etiam volutpat laoreet est, ac condimentum mi placerat eu. Quisque id ultrices ante. Proin erat lectus, bibendum nec sagittis sed, volutpat ac dolor. Nulla mauris magna, rhoncus quis mattis at, dapibus sed odio. Ut porttitor felis ut vehicula cursus. </p>
+
+	</article>
+	
+	
+	
+	<footer>
+	
+	<section class="first">
+	<p>&copy;2015 AC Electronics Co.</p>
+	</section>
+	
+	<section>
+		<h3>nested footer section</h3>
+		<p>Morbi diam ipsum, gravida sed scelerisque quis, imperdiet vitae quam. Donec sollicitudin, nunc sit amet convallis sagittis, libero ipsum sollicitudin elit, ac vestibulum ante turpis faucibus tellus.</p>
+	</section> 
+				
+	<section>
+		<h3>nested footer section</h3>
+		<p>Morbi diam ipsum, gravida sed scelerisque quis, imperdiet vitae quam. Donec sollicitudin, nunc sit amet convallis sagittis, libero ipsum sollicitudin elit, ac vestibulum ante turpis faucibus tellus.</p>
+	</section>
+	   
+	<section>
+		<h3>nested footer section</h3>
+		<p>Morbi diam ipsum, gravida sed scelerisque quis, imperdiet vitae quam. Donec sollicitudin, nunc sit amet convallis sagittis, libero ipsum sollicitudin elit, ac vestibulum ante turpis faucibus tellus.</p>
+	</section>  
+		
+	 <br class="clearing">        
+	</footer>
+
+
+</content>
+</body>
+</html>
